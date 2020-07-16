@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli';
+    font-weight: 700;
+    font-size: 30px;
+    background-color: rgb(40, 167, 218);
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+#canvas {
+    display: grid;
+    grid-template-columns: 50px 50px 50px;
+    grid-template-rows: 50px 50px 50px;
+    grid-gap: 5px
+}
+
+.numbers{
+    border: 2px solid rgb(0, 53, 133);
+    height: 50px;
+    text-align: center;
+    color: white;
+}
+
+header {
+    text-align: center;
+    font-size: 23px;
+    background-color: rgb(255, 71, 71);
+    color: white;
+    padding: 10px 0px
+}
+
+.headwrap {
+    text-align: center;
+    line-height: 25px;
+    font-size: 25px;
+    color: rgb(0, 53, 133);
+}
+
+.visible{
+    display:block !important;
+    animation-name: visible;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.visibl{
+    display:grid !important;
+    animation-name: visible;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes visible {
+    0% {
+        opacity: 0
+    }
+    50%{
+        opacity: 0
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.invisible{
+    animation-name: invisible;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.blocked{
+    animation-name: invisible;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+#start, #canvas {
+    display: none;
+}
+
+@keyframes invisible {
+    0% {
+        opacity: 1
+    }
+    100%{
+        opacity: 0;
+        display: none;
+    }
+}
+
+.block {
+    display: none
+}
+
+.aftermatch {
+    text-align: center;
+    color: rgb(0, 53, 133);
+    font-size: 25px;
+    line-height: 35px
+}
+
+#restart{
+    color:rgb(255, 71, 71)
+}
+
+.headwrap {
+    position: relative;
+    top:35vh
+}
+
+#canvas {
+    transform: scale(1.7);
+    position: relative;
+    top: 20vh;
+    left: 46vw;
+    width: 200px
+}
+
+footer {
+    background-color: rgb(27, 38, 61);
+    text-align: center;
+    padding: 10px 0px 20px 0px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    font-size: 10px;
+    font-weight: 400;
+    color: white
+}
+
+span,#restart {
+    cursor: pointer;
+}
+
+@media (max-width:600px) {
+    #canvas {
+        top: 18vh;
+        left: 34.5vw;
+    }
+
+}
