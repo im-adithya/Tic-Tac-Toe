@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+    <title>Tic Tac Toe</title>
+</head>
+
+<body>
+    <header>Unbeatable Tic-Tac-Toe</header>
+    <div class="headwrap">
+        <div id="sprite">How would you like to play <br><span id='X' onclick="xoro()" style="color: white">x</span> or
+            <span id='O' onclick="xoro()" style="color: white">o</span> ?</div>
+        <div id='start'>Want to start first? <span id='mefirst' onclick="value()" style="color: white">Yes</span> or
+            <span id='youfirst' onclick="value()" style="color: white">No</span></div>
+    </div>
+    <div id="canvas">
+        <div class="numbers" id="1" onclick="clicked()"></div>
+        <div class="numbers" id="2" onclick="clicked()"></div>
+        <div class="numbers" id="3" onclick="clicked()"></div>
+        <div class="numbers" id="4" onclick="clicked()"></div>
+        <div class="numbers" id="5" onclick="clicked()"></div>
+        <div class="numbers" id="6" onclick="clicked()"></div>
+        <div class="numbers" id="7" onclick="clicked()"></div>
+        <div class="numbers" id="8" onclick="clicked()"></div>
+        <div class="numbers" id="9" onclick="clicked()"></div>
+    </div>
+    <div class="aftermatch">
+        <div class="block" id='lose'>You Lose!</div>
+        <div class="block" id='draw'>It was a Draw...</div>
+        <div onclick="window.location.reload()" class="block" id='restart'>Play Again!</div>
+    </div>
+    <footer>&copy The_Hyperboy</footer>
+</body>
+<script src="app.js"></script>
+
+</html>
